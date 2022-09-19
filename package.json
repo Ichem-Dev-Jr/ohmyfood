@@ -1,0 +1,22 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "projet 3 ohmyfood",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ichem-Dev-Jr/ohmyfood.git"
+  },
+  "author": "ichem menouer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ichem-Dev-Jr/ohmyfood/issues"
+  },
+  "homepage": "https://github.com/Ichem-Dev-Jr/ohmyfood#readme",
+  "devDependencies": {
+    "sass": "^1.54.9"
+  }
+}
