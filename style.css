@@ -14,6 +14,11 @@ body {
 main {
   padding: 0 7rem;
 }
+@media (max-width: 1000px) {
+  main {
+    padding: 0 1rem;
+  }
+}
 
 h2 {
   padding: 2rem 0;
@@ -66,10 +71,10 @@ header {
   padding: 1rem 2rem;
   border-radius: 2rem;
   border: none;
-  background-image: linear-gradient(rgba(255, 121, 218, 0.9), rgba(147, 86, 220, 0.9));
   transition: transform 200ms;
   margin-top: 1rem;
   box-shadow: 1px 5px 16px -5px black;
+  background-image: linear-gradient(rgba(255, 121, 218, 0.9), rgba(147, 86, 220, 0.9));
 }
 .explorer button:hover {
   transform: scale(1.02);
@@ -170,12 +175,11 @@ header {
 }
 .menus .card__description {
   position: relative;
+  background-color: white;
+  border-radius: 0 0 1rem 1rem;
 }
 .menus .card__description h3, .menus .card__description p {
-  margin: 0.5rem;
-}
-.menus .card__description h3 {
-  padding-top: 0.5rem;
+  padding: 0.3rem;
 }
 .menus .card__description i {
   font-size: 2rem;
@@ -183,6 +187,18 @@ header {
   right: 1rem;
   top: 50%;
   transform: translateY(-50%);
+}
+.menus .card__description .fa-solid {
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+  transition: all 200ms;
+  background-image: linear-gradient(rgb(255, 121, 218), rgb(147, 86, 220));
+}
+.menus .card__description:hover .fa-solid {
+  opacity: 1;
+  transform: translateY(-50%) scale(1.2);
 }
 
 footer {
