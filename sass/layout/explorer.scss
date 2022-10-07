@@ -1,30 +1,16 @@
-@use "../utils/box-shadow.scss";
-@use "../utils/linear-gradient";
+@use "../utils/mixins";
 
-.explorer{
+.explorer {
   text-align: center;
-  & h2{
+  & h2 {
     font-size: 2rem;
   }
   & p {
     font-size: 1rem;
   }
   & button {
-    color: white;
-    font-size: 1.5rem;
-    font-weight: 300;
-    padding: 1rem 2rem;
-    border-radius: 2rem;
-    border: none; 
-    transition: transform 200ms;
-    margin-top: 1rem;
-    @include box-shadow.base-shadow;
-    @include linear-gradient.gradient(0.9);
-    
+    @include mixins.base-button;
   }
 
-  & button:hover{
-    transform: scale(1.02);
-    opacity: 0.9;
-  }
+
 }
