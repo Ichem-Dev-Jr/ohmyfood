@@ -8,3 +8,14 @@
     }
   }
 }
+
+@keyframes appear{
+ from{
+margin-top:15%;
+opacity: 10%;
+    }
+  to{
+margin-top: 0;
+opacity: 100%;
+  }
+}

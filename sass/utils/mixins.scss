@@ -1,10 +1,10 @@
 @use "./colors";
 
 @mixin box-shadow {
-  box-shadow: 1px 5px 16px -5px colors.$lightergrey;
+  box-shadow: 1px 5px 16px -5px colors.$lightgrey;
 }
-@mixin transform-zoom {
-  transform: scale(1.02);
+@mixin transform-zoom($zoom-level:1.02, $transformation: null) {
+  transform: $transformation scale($zoom-level);
 }
 @mixin gradient($opacity: 0.9) {
   background-image: linear-gradient(
@@ -12,12 +12,21 @@
     rgba(147, 86, 220, $opacity)
   );
 }
-
+@mixin font-awesome($font-weight: 400){
+  display: inline-block;
+  position: absolute;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing:antialiased;
+  font-family: "Font Awesome 6 Free";
+  font-weight: $font-weight;
+}
 @mixin heart-animation {
   position: relative;
   background-color: white;
   border-radius: 0 0 1rem 1rem;
-
+  
   i {
     font-size: 2rem;
     position: absolute;
@@ -33,11 +42,11 @@
     transition: all 200ms;
     @include gradient(1);
   }
-
-  &:hover .fa-solid {
+  &:hover .fa-solid{
     opacity: 1;
     transform: translateY(-50%) scale(1.2);
   }
+  
 }
 @mixin base-button {
   color: white;
