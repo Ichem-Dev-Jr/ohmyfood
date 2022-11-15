@@ -42,10 +42,11 @@
     transition: all 200ms;
     @include gradient(1);
   }
-  &:hover .fa-solid{
-    opacity: 1;
-    transform: translateY(-50%) scale(1.2);
-  }
+   .heart:hover .fa-solid {
+   opacity: 1;
+   transform: translateY(-50%) scale(1.2);
+   cursor: pointer;
+ }
   
 }
 @mixin base-button {

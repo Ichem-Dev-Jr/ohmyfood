@@ -1,13 +1,21 @@
 @use "../utils/mixins";
 @use "../utils/colors";
+@use "../utils/variables";
 
 .explorer {
   text-align: center;
   & h2 {
-    font-size: 2rem;
+    font-size: 1rem;
+    padding: 0;
+    @media (min-width: variables.$breakpoint-tablet){
+      font-size: 2rem;
+    }
   }
   & p {
-    font-size: 1rem;
+    font-size: 0.8rem;
+    @media (min-width: variables.$breakpoint-tablet){
+      font-size: 1rem;
+    }
   }
   & button {
     @include mixins.base-button;

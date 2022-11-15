@@ -1,18 +1,33 @@
 @use "../utils/mixins";
-@use "../utils/variables.scss";
+@use "../utils/variables";
 @use "../utils/colors";
 
 .fonctionnement {
   counter-reset: steps;
   margin-bottom: 2rem;
   & ol {
-    display: flex;
-    gap: 2rem;
-    @media (max-width: 1100px) {
-      flex-direction: column;
-    }
+    padding-left: 0;
+    @media (min-width: variables.$breakpoint-tablet){
+      display: flex;
+      flex-wrap: wrap;
+     }
+    @media (min-width: variables.$breakpoint) {
+      display:flex;
+      flex-wrap: nowrap;
+      gap:2rem;
+      }
   }
   & li {
+    @media (min-width: variables.$breakpoint-tablet){
+     margin-left: 1rem;
+    }
+    margin-bottom: 2rem;
+    &:nth-child(3){
+      background-color: lighten(colors.$purple,35%);
+      & i{
+        color: colors.$purple;
+      } 
+    }
     position: relative;
     display: flex;
     align-items: center;
@@ -37,17 +52,11 @@
     flex-grow: 1;
     border-radius: 1rem;
     @include mixins.box-shadow;
-    &:hover{
-      @include mixins.transform-zoom;
-      background-color: lighten(colors.$purple, 35%);
-      cursor: pointer;
-      i::before{
-        color: colors.$purple};
-     }
+  }
     & i.fas {
       margin-right: 1rem;
       color: colors.$lightgrey;
       font-size: 1.5rem;
     }
   }
-}
+
