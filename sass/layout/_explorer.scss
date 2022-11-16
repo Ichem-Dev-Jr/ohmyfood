@@ -7,13 +7,13 @@
   & h2 {
     font-size: 1rem;
     padding: 0;
-    @media (min-width: variables.$breakpoint-tablet){
+    @media (min-width: variables.$breakpoint-tablet) {
       font-size: 2rem;
     }
   }
   & p {
     font-size: 0.8rem;
-    @media (min-width: variables.$breakpoint-tablet){
+    @media (min-width: variables.$breakpoint-tablet) {
       font-size: 1rem;
     }
   }
@@ -21,7 +21,7 @@
     @include mixins.base-button;
   }
 }
-.pageloader{
+.pageloader {
   $animation-duration: 1s;
   $animation-count: 2;
   position: fixed;
@@ -44,18 +44,18 @@
     border-radius: 50%;
     animation: spin $animation-duration ease-in-out;
     animation-iteration-count: $animation-count;
-}
-&::after {
-  content: "";
-  position: absolute;
-  height: 80px;
-  width: 80px;
-  border-right: 5px solid transparent;
-  border-top: 5px solid colors.$purple;
-  border-radius: 50%;
-  animation: spin $animation-duration ;
-  animation-iteration-count: $animation-count;
-}
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    border-right: 5px solid transparent;
+    border-top: 5px solid colors.$purple;
+    border-radius: 50%;
+    animation: spin $animation-duration;
+    animation-iteration-count: $animation-count;
+  }
 }
 @keyframes disappear {
   to {
