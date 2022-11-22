@@ -14,7 +14,7 @@
     @media (min-width: variables.$breakpoint) {
       display: flex;
       flex-wrap: nowrap;
-      }
+    }
   }
   & li {
     font-size: 0.7rem;
@@ -22,7 +22,7 @@
       margin-left: 1rem;
     }
     margin-bottom: 2rem;
-    i{
+    i {
       width: 1rem;
     }
     &:nth-child(3) {
