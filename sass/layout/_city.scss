@@ -1,12 +1,12 @@
-.city{
-  margin-right: -10;
-  display:flex;
+.city {
+  margin-right: -10px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  background-color:#f3f3f3;
+  background-color: #f3f3f3;
   text-align: center;
   gap: 1rem;
-   & i {
-    font-size:1.2rem;
+  & i {
+    font-size: 1.2rem;
   }
 }

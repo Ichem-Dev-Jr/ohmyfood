@@ -20,7 +20,8 @@ h2 {
   margin: 0;
 }
 
-h3, p {
+h3,
+p {
   margin: 0;
 }
 
@@ -38,7 +39,7 @@ header {
 }
 
 .city {
-  margin-right: -10;
+  margin-right: -10px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -73,7 +74,7 @@ header {
 .explorer button {
   color: white;
   font-weight: 300;
-  font-size: 1.5rem;
+  font-size: 1rem;
   padding: 1rem 2rem;
   border: none;
   border-radius: 2rem;
@@ -86,6 +87,11 @@ header {
 .explorer button:hover {
   transform: scale(1.02);
   opacity: 0.9;
+}
+@media (min-width: 768px) {
+  .explorer button {
+    font-size: 1.5rem;
+  }
 }
 
 .pageloader {
@@ -150,10 +156,10 @@ header {
   .fonctionnement ol {
     display: flex;
     flex-wrap: nowrap;
-    gap: 2rem;
   }
 }
 .fonctionnement li {
+  font-size: 0.7rem;
   margin-bottom: 2rem;
   position: relative;
   display: flex;
@@ -169,6 +175,9 @@ header {
   .fonctionnement li {
     margin-left: 1rem;
   }
+}
+.fonctionnement li i {
+  width: 1rem;
 }
 .fonctionnement li:nth-child(3) {
   background-color: #f2eafb;
@@ -287,6 +296,9 @@ footer h2 {
 }
 footer p {
   padding: 0.2rem;
+}
+footer p i {
+  width: 1rem;
 }
 
 @keyframes appear {
@@ -520,7 +532,7 @@ body h2 {
 #page-restaurant section.order button {
   color: white;
   font-weight: 300;
-  font-size: 1.5rem;
+  font-size: 1rem;
   padding: 1rem 2rem;
   border: none;
   border-radius: 2rem;

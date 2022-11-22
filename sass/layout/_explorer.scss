@@ -19,6 +19,9 @@
   }
   & button {
     @include mixins.base-button;
+    @media (min-width: variables.$breakpoint-tablet){
+      font-size: 1.5rem;
+    }
   }
 }
 .pageloader {

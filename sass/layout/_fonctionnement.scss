@@ -7,26 +7,29 @@
   margin-bottom: 2rem;
   & ol {
     padding-left: 0;
-    @media (min-width: variables.$breakpoint-tablet){
+    @media (min-width: variables.$breakpoint-tablet) {
       display: flex;
       flex-wrap: wrap;
-     }
+    }
     @media (min-width: variables.$breakpoint) {
-      display:flex;
+      display: flex;
       flex-wrap: nowrap;
-      gap:2rem;
       }
   }
   & li {
-    @media (min-width: variables.$breakpoint-tablet){
-     margin-left: 1rem;
+    font-size: 0.7rem;
+    @media (min-width: variables.$breakpoint-tablet) {
+      margin-left: 1rem;
     }
     margin-bottom: 2rem;
-    &:nth-child(3){
-      background-color: lighten(colors.$purple,35%);
-      & i{
+    i{
+      width: 1rem;
+    }
+    &:nth-child(3) {
+      background-color: lighten(colors.$purple, 35%);
+      & i {
         color: colors.$purple;
-      } 
+      }
     }
     position: relative;
     display: flex;
@@ -53,10 +56,9 @@
     border-radius: 1rem;
     @include mixins.box-shadow;
   }
-    & i.fas {
-      margin-right: 1rem;
-      color: colors.$lightgrey;
-      font-size: 1.5rem;
-    }
+  & i.fas {
+    margin-right: 1rem;
+    color: colors.$lightgrey;
+    font-size: 1.5rem;
   }
-
+}
